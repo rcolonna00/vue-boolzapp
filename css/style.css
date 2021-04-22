@@ -16,9 +16,10 @@ img{
 }
 
 .img-utente{
-    width: 50px;
+    width: 40px;
     border-radius: 50%;
     overflow: hidden;
+    margin-right: 8px;
 }
 /* FINE GENERAL */
 
@@ -49,14 +50,16 @@ img{
 
 .parte-utenti{
     width: 30%;
+    background-color: white;
+    border-right: 1px solid lightgray;
 }
 
 .parte-messaggi{
     width: 70%;
+    background-image: url(../img/mine.jpg);
 
     /*test*/
     height: 100%;
-    background-color: violet;
 }
 /* FINE MACROAREE */
 
@@ -108,12 +111,48 @@ img{
 /* FINE NOTIFICHE */
 
 /* SEARCH */
+.search{
+    background-color: #eaeaea;
+    padding: 8px;
+}
+
+.search input{
+    width: 100%;
+    line-height: 20px;
+}
 /* FINE SEARCH */
 
+/* CONTATTI */
+
+/* scroll bar da controllare alla fine */
+.contatti{
+    overflow-y: scroll;
+}
+
+.single-contact{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-top: 1px solid #e9ebeb;
+    padding: 5px 10px;
+}
+/* FINE CONTATTI */
 /* FINE COLONNA DI SINISTRA */
 
 /* COLONNA DI DESTRA */
-/* FINE COLONNA DI DESTRA */
+/* UTENTE SELEZIONATO */
+.ultimo-accesso{
+    color: #b1b1b1;
+    font-size: 10px;
+}
+/* FINE UTENTE SELEZIONATO */
 
+/* MESSAGGI */
+/* FINE MESSAGGI */
+
+/* BOTTOM BAR */
+/* FINE BOTTOM BAR */
+
+/* FINE COLONNA DI DESTRA */
 
 /* FINE APP */
