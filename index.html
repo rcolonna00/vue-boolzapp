@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Collega html e css -->
-    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Collega html il font usato -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Collega html e font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <!-- Collega html e Vue -->
@@ -21,8 +24,51 @@
 
             <!-- APP -->
             <div class="container-app">
-                <div class="parte-utenti"></div>
-                <div class="parte-messaggi"></div>
+
+                <!-- COLONNA DI SINISTRA -->
+                <div class="parte-utenti">
+
+                    <!-- UTENTE -->
+                    <div class="utente">
+                        <div class="nome-foto">
+                            <div class="img-utente">
+                                <img src="img/avatar_io.jpg" alt="">
+                            </div>
+                            <div class="nome">Nome Utente</div>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-circle-notch"></i>
+                            <span class="center-icon"><i class="fas fa-comment-alt"></i></span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <!-- FINE UTENTE -->
+
+                    <!-- NOTIFICHE -->
+                    <div class="notifiche">
+                        <div class="img-notifica">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        <div class="text-notifica">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <!-- FINE NOTIFICHE -->
+
+                    <!-- SEARCH -->
+                    <!-- FINE SEARCH -->
+
+
+                </div>
+                <!-- FINE COLONNA DI SINISTRA -->
+
+                <!-- COLONNA DI DESTRA -->
+                <div class="parte-messaggi">
+
+                </div>
+                <!-- FINE COLONNA DI DESTRA -->
+
             </div>
             <!-- FINE APP -->
 

@@ -2,9 +2,24 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* GENERAL */
+img{
+    width: 100%;
+}
+
+.nome-foto{
+    display: flex;
+    align-items: center;
+}
+
+.img-utente{
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
 /* FINE GENERAL */
 
 /* BACKGROUND-COLOR APP */
@@ -26,7 +41,6 @@
     
 
     /* Test */
-    background-color: aquamarine;
     /*Fare attenzione con 
     l'altezza da mettere */
     height: 550px;
@@ -35,10 +49,6 @@
 
 .parte-utenti{
     width: 30%;
-
-    /*test*/
-    height: 100%;
-    background-color: brown;
 }
 
 .parte-messaggi{
@@ -49,4 +59,61 @@
     background-color: violet;
 }
 /* FINE MACROAREE */
+
+/* COLONNA DI SINISTRA */
+/* UTENTE */
+.utente{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eaeaea;
+    padding: 10px;
+}
+
+.icon i{
+    font-size: 20px;
+    cursor: pointer;
+    color: #b1b1b1;
+}
+
+.center-icon{
+    padding: 0 10px;
+}
+/* FINE UTENTE */
+
+/* NOTIFICHE */
+.notifiche{
+    display: flex;
+    padding: 10px 0;
+    font-size: 12px;
+    background-color: #8edafb;
+    padding: 10px;
+}
+
+.img-notifica{
+    font-size: 15px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 5px;
+    color: #8edafb;
+}
+
+.notifiche a{
+    color: #6599af;
+}
+/* FINE NOTIFICHE */
+
+/* SEARCH */
+/* FINE SEARCH */
+
+/* FINE COLONNA DI SINISTRA */
+
+/* COLONNA DI DESTRA */
+/* FINE COLONNA DI DESTRA */
+
+
 /* FINE APP */
