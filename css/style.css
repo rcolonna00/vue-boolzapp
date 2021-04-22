@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+/* FINE GENERAL */
+
+/* BACKGROUND-COLOR APP */
+.color-app-sfondo{
+    background: rgb(0,149,135);
+    background: linear-gradient(180deg, rgba(0,149,135,1) 20%, rgba(213,218,216,1) 20%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* FINE BACKGROUND-COLOR APP */
+
+/* APP */
+/* MACROAREE */
+.container-app{
+    width: 1100px;
+    display: flex;
+    
+
+    /* Test */
+    background-color: aquamarine;
+    /*Fare attenzione con 
+    l'altezza da mettere */
+    height: 550px;
+    min-height: 250px;
+}
+
+.parte-utenti{
+    width: 30%;
+
+    /*test*/
+    height: 100%;
+    background-color: brown;
+}
+
+.parte-messaggi{
+    width: 70%;
+
+    /*test*/
+    height: 100%;
+    background-color: violet;
+}
+/* FINE MACROAREE */
+/* FINE APP */
