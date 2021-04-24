@@ -57,8 +57,11 @@
                     <!-- FINE NOTIFICHE -->
 
                     <!-- SEARCH -->
-                    <div class="search">
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <div class="contacts-filter">
+                        <label for="search">
+                            <i class="fas fa-search"></i>
+                        </label>
+                        <input class="cont-filter" type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!-- FINE SEARCH -->
 
@@ -66,30 +69,16 @@
                     <div class="contatti">
 
                         <!-- singolo contatto -->
-                        <div class="single-contact">
-                            <div class="img-utente"><img src="img/avatar_1.jpg" alt=""></div>
-                            <div class="nome-contatto">Michele</div>
-                        </div>
-                        <!-- fine singolo contatto -->
-
-                        <!-- singolo contatto -->
-                        <div class="single-contact">
-                            <div class="img-utente"><img src="img/avatar_2.jpg" alt=""></div>
-                            <div class="nome-contatto">Fabio</div>
-                        </div>
-                        <!-- fine singolo contatto -->
-
-                        <!-- singolo contatto -->
-                        <div class="single-contact">
-                            <div class="img-utente"><img src="img/avatar_3.jpg" alt=""></div>
-                            <div class="nome-contatto">Samuele</div>
-                        </div>
-                        <!-- fine singolo contatto -->
-
-                        <!-- singolo contatto -->
-                        <div class="single-contact">
-                            <div class="img-utente"><img src="img/avatar_4.jpg" alt=""></div>
-                            <div class="nome-contatto">Luisa</div>
+                        <div 
+                            v-for="(contact, index) in contacts" 
+                            class="single-contact" 
+                            :class="{ 'active' : index == activeContact }"
+                            @click="setActiveContact(index)"
+                        >
+                            <div class="img-utente"><img :src="'img/avatar' + contact.avatar + '.jpg'" :alt=" contact.name "></div>
+                            <div class="nome-contatto">
+                                {{ contact.name }}       
+                            </div>
                         </div>
                         <!-- fine singolo contatto -->
 
@@ -106,10 +95,13 @@
                     <div class="utente">
                         <div class="nome-foto">
                             <div class="img-utente">
-                                <img src="img/avatar_io.jpg" alt="">
+                                <img 
+                                    :src="'img/avatar' + contacts[activeContact].avatar + '.jpg'" 
+                                    alt="contacts[activeContact].name"
+                                >
                             </div>
                             <div>
-                                <div class="nome">Nome Utente</div>
+                                <div class="nome"> {{ contacts[activeContact].name }} </div>
                                 <div class="ultimo-accesso">Ultimo accesso oggi alle</div>
                             </div>
                         </div>
@@ -122,9 +114,41 @@
                     <!-- FINE UTENTE SELEZIONATO -->
 
                     <!-- MESSAGGI -->
+                    <div class="messaggi-padding">
+
+                        <!-- SINGLE MESSAGE -->
+                        <div 
+                            v-for="message in contacts[activeContact].messages" 
+                            class="messaggi"
+                        >
+                        
+                            <div :class="message.status">
+                                <div class="sms-text">{{ message.text }}</div>
+                                <div class="sms-data">{{ message.date }}</div>
+                            </div>
+                        
+                        </div>
+                        <!-- FINE SINGLE MESSAGE -->
+
+                    </div>    
                     <!-- FINE MESSAGGI -->
 
                     <!-- BOTTOM BAR -->
+                    <div class="barra-scrittura">
+
+                        <div class="smile">
+                            <i class="far fa-smile"></i>
+                        </div>
+
+                        <div class="text-sms">
+                            <input type="text" @keyup.enter="addNewMessage" placeholder="Scrivi un messaggio">
+                        </div>
+
+                        <div class="microfono">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+
+                    </div>
                     <!-- FINE BOTTOM BAR -->                    
 
                 </div>

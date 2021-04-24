@@ -2,6 +2,8 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            activeContact: 0,
+            userMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -90,6 +92,18 @@ var app = new Vue(
         },
         methods: {
 
+            // collega la colonna di sinistra 
+            // con la colonna di destra 
+            // tramite un index
+            setActiveContact(index) {
+                this.activeContact = index;
+            },
+
+            // aggiunge il messaggio inviato
+            // come array messages
+            addNewMessage() {
+               
+            }
         }
     }
-  )
+)
