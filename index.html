@@ -76,7 +76,8 @@
 
                         <!-- singolo contatto -->
                         <div 
-                            v-for="(contact, index) in contacts" 
+                            v-for="(contact, index) in contacts"
+                            v-if="contact.visible == true" 
                             class="single-contact" 
                             :class="{ 'active' : index == activeContact }"
                             @click="setActiveContact(index)"

@@ -147,14 +147,16 @@ var app = new Vue(
                 this.contacts.forEach((contact) => {
                     const contactNameLowerCase = contact.name.toLowerCase();
                     
-                    // console.log(userFilterLowerCase)
-                    // console.log(contactNameLowerCase)
+                    console.log(userFilterLowerCase)
+                    console.log(contactNameLowerCase)
 
                     if( contactNameLowerCase.includes(userFilterLowerCase) ) {
                         contact.visible = true;
                     } else{
                         contact.visible = false;
                     }
+
+                    console.log(contact.visible)
                 } );
             }
         }
