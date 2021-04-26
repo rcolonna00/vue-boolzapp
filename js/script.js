@@ -101,8 +101,42 @@ var app = new Vue(
 
             // aggiunge il messaggio inviato
             // come array messages
-            addNewMessage() {
-               
+            addNewMessage( activeContact ) {
+                const arrayMessages = this.contacts[activeContact].messages
+                console.log(arrayMessages)
+         
+                // Si avvia la funzione solo se 
+                // l'utente scrive qualcosa
+                if ( this.userMessage.length > 0 ) {
+
+                    arrayMessages.push ({
+
+                        date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                        text: this.userMessage,
+                        status: 'sent'
+
+                    });
+                    
+                    this.userMessage = '';
+
+                    setTimeout( () => {
+
+                        arrayMessages.push ({
+
+                            date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                            text: 'ok',
+                            status: 'received'
+    
+                        });
+
+                    }, 1000)
+
+                    // funzione che manda 'ok' dopop un secondo dal messaggio inviato
+                    // dall'utente e utilizzo l'arrow function per utilizzare 
+                    //gli stessi this che ho usato nella prima parte
+                    
+                }
+
             }
         }
     }

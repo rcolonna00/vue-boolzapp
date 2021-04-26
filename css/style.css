@@ -189,11 +189,13 @@ img{
 .sent{
     background-color: #d5f9ba;
     float: right;
+    min-width: 100px;
 }
 
 .received {
     background-color: white;
     float: left;
+    min-width: 100px;
 }
 
 .sms-data{

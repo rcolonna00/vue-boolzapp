@@ -141,7 +141,11 @@
                         </div>
 
                         <div class="text-sms">
-                            <input type="text" @keyup.enter="addNewMessage" placeholder="Scrivi un messaggio">
+                            <input 
+                                type="text"
+                                @keyup.enter="addNewMessage( activeContact )" 
+                                v-model="userMessage"
+                                placeholder="Scrivi un messaggio">
                         </div>
 
                         <div class="microfono">
