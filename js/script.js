@@ -4,6 +4,7 @@ var app = new Vue(
         data: {
             activeContact: 0,
             userMessage: '',
+            userFilter: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -103,7 +104,6 @@ var app = new Vue(
             // come array messages
             addNewMessage( activeContact ) {
                 const arrayMessages = this.contacts[activeContact].messages
-                console.log(arrayMessages)
          
                 // Si avvia la funzione solo se 
                 // l'utente scrive qualcosa
@@ -119,6 +119,9 @@ var app = new Vue(
                     
                     this.userMessage = '';
 
+                    // funzione che manda 'ok' dopop un secondo dal messaggio inviato
+                    // dall'utente e utilizzo l'arrow function per utilizzare 
+                    // gli stessi this che ho usato nella prima parte
                     setTimeout( () => {
 
                         arrayMessages.push ({
@@ -130,13 +133,29 @@ var app = new Vue(
                         });
 
                     }, 1000)
-
-                    // funzione che manda 'ok' dopop un secondo dal messaggio inviato
-                    // dall'utente e utilizzo l'arrow function per utilizzare 
-                    //gli stessi this che ho usato nella prima parte
-                    
+                
+                } else{
+                    alert( 'Messaggio vuoto' )
                 }
 
+            },
+
+            // funzione per filtrare gli utenti
+            filterContacts() {
+                const userFilterLowerCase = this.userFilter.toLowerCase();
+                
+                this.contacts.forEach((contact) => {
+                    const contactNameLowerCase = contact.name.toLowerCase();
+                    
+                    // console.log(userFilterLowerCase)
+                    // console.log(contactNameLowerCase)
+
+                    if( contactNameLowerCase.includes(userFilterLowerCase) ) {
+                        contact.visible = true;
+                    } else{
+                        contact.visible = false;
+                    }
+                } );
             }
         }
     }

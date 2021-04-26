@@ -61,7 +61,13 @@
                         <label for="search">
                             <i class="fas fa-search"></i>
                         </label>
-                        <input class="cont-filter" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input 
+                            class="cont-filter" 
+                            type="text" 
+                            placeholder="Cerca o inizia una nuova chat"
+                            v-model="userFilter"
+                            @keyup="filterContacts"
+                        >
                     </div>
                     <!-- FINE SEARCH -->
 
