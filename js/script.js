@@ -140,7 +140,7 @@ var app = new Vue(
 
             },
 
-            // funzione per filtrare gli utenti
+            // funzione per filtrare gli utenti 
             filterContacts() {
                 const userFilterLowerCase = this.userFilter.toLowerCase();
                 
@@ -155,7 +155,6 @@ var app = new Vue(
                     } else{
                         contact.visible = false;
                     }
-
                     console.log(contact.visible)
                 } );
             }
